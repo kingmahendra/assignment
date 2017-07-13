@@ -1,10 +1,12 @@
 import { TestBed, inject } from '@angular/core/testing';
+import { HttpModule } from '@angular/http';
 
 import { GitDataService } from './git-data.service';
 
 describe('GitDataService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
+      imports: [ HttpModule ],
       providers: [GitDataService]
     });
   });
