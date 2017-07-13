@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { GitDataService } from './services/git-data.service';
 import { FollowerComponent } from './follower/follower.component';
 import { FollowingComponent } from './following/following.component';
+import { ReposComponent } from './repos/repos.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { FollowingComponent } from './following/following.component';
     AppComponent,
     FollowerComponent,
     FollowingComponent,
+    ReposComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,6 +30,10 @@ import { FollowingComponent } from './following/following.component';
       {
         path: 'following/:login',
         component: FollowingComponent
+      },
+      {
+        path: 'repos/:login',
+        component: ReposComponent
       }
 
     ])
