@@ -8,8 +8,13 @@
     <span *ngIf="info.email" >Email: {{info.email}}</span> <br>
     <span>Componay: {{info.company}}</span><br>
     <span>Location: {{info.location}}</span> <br>
-     <span *ngIf="info.blog" >Blog: {{info.blog}}</span> <br>
-            
+    <span *ngIf="info.blog" >Blog: {{info.blog}}</span> <br>
+    <div class="links">
+      <a routerLink="/follower/{{info.login}}">Followers <span class="bubble">{{info.followers}}</span></a> | 
+      <a routerLink="/following/{{info.login}}">following <span class="bubble">{{info.following}}</span></a> |
+      <a routerLink="/repos">public_repos <span class="bubble">{{info.public_repos}}</span></a>
+    </div>
+    <router-outlet></router-outlet>
   </div>
 </div>
 

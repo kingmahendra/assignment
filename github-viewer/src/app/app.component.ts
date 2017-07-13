@@ -22,8 +22,8 @@ export class AppComponent {
   showDetails () {
   	this.gitDataService.fetchData(this.git_id)
   	.subscribe((data) => { 
-  		console.log(data)
   		this.info = data;
+  		this.git_id = '';
   	 }, (error) => {console.log(error)})
   	// .catch ( err => console.log(err.message));
   }

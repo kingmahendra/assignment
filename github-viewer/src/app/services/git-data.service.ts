@@ -13,6 +13,11 @@ export class GitDataService {
     return this.http.get(url).map(response => response.json())
   }
 
+  fetchFollowers (user): Observable<any> {
+    const url = 'https://api.github.com/users/' + user + '/followers';
+    return this.http.get(url).map(response => response.json())
+  }
+
  /* private handleError (error: Response | any) {
   // In a real world app, you might use a remote logging infrastructure
 	  let errMsg: string;
