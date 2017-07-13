@@ -20,7 +20,8 @@ export class AppComponent {
   } 
 
   showDetails () {
-  	this.gitDataService.fetchData(this.git_id)
+  	const url = 'https://api.github.com/users/' + this.git_id;
+  	this.gitDataService.fetchData(url)
   	.subscribe((data) => { 
   		this.info = data;
   		this.git_id = '';

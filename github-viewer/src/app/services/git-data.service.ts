@@ -8,18 +8,12 @@ import 'rxjs/add/operator/map';
 export class GitDataService {
 
   constructor( private http: Http) { }
-  fetchData (user): Observable<any> {
-  	const url = 'https://api.github.com/users/' + user;
-    return this.http.get(url).map(response => response.json())
-  }
-
-  fetchFollowers (user): Observable<any> {
-    const url = 'https://api.github.com/users/' + user + '/followers';
+  fetchData (url): Observable<any> {
+  	// const url = 'https://api.github.com/users/' + user;
     return this.http.get(url).map(response => response.json())
   }
 
  /* private handleError (error: Response | any) {
-  // In a real world app, you might use a remote logging infrastructure
 	  let errMsg: string;
 	  if (error instanceof Response) {
 	    const body = error.json() || '';

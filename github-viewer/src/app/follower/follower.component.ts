@@ -16,7 +16,9 @@ export class FollowerComponent implements OnInit {
   	this.route.params.forEach((params: Params) => {
   		this.user = params['login']
   	});
-    this.gitDataService.fetchFollowers(this.user)
+
+  	const url = 'https://api.github.com/users/' + this.user + '/followers';
+    this.gitDataService.fetchData(url)
     .subscribe((data) => { 
   		this.followers = data;
   	}, (error) => {console.log(error)});
