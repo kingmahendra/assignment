@@ -1,3 +1,17 @@
+div.repos {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 5px solid #666
+}
+
+div.repos input {
+   margin: 0 auto;
+   padding: 5px;
+   width: 80%;
+   color: #999;
+   font: 15px/1 Helvetica, Verdana, sans-serif;
+}
+
 ul {
  list-style: none;
   margin: 0;

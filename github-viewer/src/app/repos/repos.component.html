@@ -1,6 +1,5 @@
 <div class="repos">
-<h4> {{gitDataService.gitUser.info.login}} public repositories</h4>
-<input type="text" [(ngModel)]="queryString" id="search" placeholder="fileter by name">
+<input type="text" [(ngModel)]="queryString" id="search" placeholder="filter repos by name">
 <ul>
   <li *ngFor="let item of gitDataService.gitUser.repos | search: queryString"> 
    <a [href]="item.html_url"><span> {{item.name}} </span> </a></li>

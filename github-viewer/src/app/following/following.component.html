@@ -1,5 +1,4 @@
 <div class="following">
-<h4> {{gitDataService.gitUser.info.login}} followings</h4>
 <ul >
   <li *ngFor="let item of gitDataService.gitUser.followings" (click)="showDetails(item.login)">  
    <img [src] = "item.avatar_url" class="avatar" alt="Avatar"><span> {{item.login}} </span>

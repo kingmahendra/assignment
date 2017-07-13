@@ -3,30 +3,95 @@
 	height: 100%;
 	margin : 0 auto;
 	padding: 15px;
-	background-color: #eeeeee;
+}
+.main h1{
+	background: #eee;
+    padding: 20px;
+    color: #333;
+    font: 50px/1 Helvetica, Verdana, sans-serif;
 }
 .search {
 	width: 50%;
 	margin: 10px;
+	padding: 5px;
 	margin-left: 0px; 
+}
+
+button.submit{
+	padding: 5px;
+    background: #0053a9;
+    color: white;
+    cursor: pointer;
 }
 
 .details{
 	height: 100%;
 }
 .details h3{
+	font: 30px/1 Helvetica, Verdana, sans-serif;
 	margin-bottom: 2px;
+	color: #0053a9;
 }
-.links a {
-	text-decoration: none;
+
+.details span{
+	font: 15px/1 Helvetica, Verdana, sans-serif;
 }
+
 
 .details .avatar{
   position: relative;
   float:left;
-  margin-right:15px;
+  margin: 0 15px;
   width: 100px;
   height: 100px;
   border:2px solid #cccccc;
 
+}
+
+nav {
+  margin: 50px;
+}
+
+ul {
+  list-style-type: none;
+  height: 30px;
+}
+
+li {
+  height: 25px;
+  float: left;
+  margin-right: 0px;
+  border-right: 1px solid #aaa;
+  padding: 0 20px;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  text-decoration: none;
+  color: #ccc;
+  font: 25px/1 Helvetica, Verdana, sans-serif;
+  text-transform: uppercase;
+  -webkit-transition: all 0.5s ease;
+}
+
+li a:hover {
+  color: #666;
+}
+
+li a:focus, li a:active {
+  font-weight: bold;
+  color: #333;
+}
+
+.bubble {
+	padding: 4px; 
+    background: tomato;
+    color: white;
+    font: 15px/1 Helvetica, Verdana, sans-serif;
+    border-radius: 5px;
+    display: inline-block;
+    vertical-align: text-bottom;
 }
