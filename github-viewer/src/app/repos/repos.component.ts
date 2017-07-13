@@ -9,19 +9,11 @@ import { SearchPipe } from './../search.pipe';
   styleUrls: ['./repos.component.css']
 })
 export class ReposComponent implements OnInit {
-  // repos = [];
-  // user = '';
   constructor(private gitDataService: GitDataService) { }
 
   ngOnInit() {
-  	// this.route.params.forEach((params: Params) => {
-  	// 	this.user = params['login']
-  	// });
   	const url = 'https://api.github.com/users/' + this.gitDataService.gitUser.info.login + '/repos';
   	this.gitDataService.fetchReposData(url)
-   //  .subscribe((data) => { 
-  	// 	this.repos = data;
-  	// }, (error) => {console.log(error)});
   }
 
 }
