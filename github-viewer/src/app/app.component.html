@@ -1,18 +1,18 @@
 <div class="main">
   <h1> GitHub API Viewer </h1>
-  <input [(ngModel)]="git_id" placeholder="Enter GitHub id eg. mralexgray" class="search">
+  <input [(ngModel)]="gitDataService.search" placeholder="Enter GitHub id eg. mralexgray" class="search">
   <button (click) = "showDetails()"> Show details </button>
-  <div class="details" *ngIf= "info">
-    <img [src] = "info.avatar_url" class="avatar" alt="Avatar">
-    <h3> {{info.name}} </h3>
-    <span *ngIf="info.email" >Email: {{info.email}}</span> <br>
-    <span>Componay: {{info.company}}</span><br>
-    <span>Location: {{info.location}}</span> <br>
-    <span *ngIf="info.blog" >Blog: {{info.blog}}</span> <br>
+  <div class="details" *ngIf= "gitDataService.gitUser.info">
+    <img [src] = "gitDataService.gitUser.info.avatar_url" class="avatar" alt="Avatar">
+    <h3> {{gitDataService.gitUser.info.name}} </h3>
+    <span *ngIf="gitDataService.gitUser.info.email" >Email: {{gitDataService.gitUser.info.email}}</span> <br>
+    <span>Componay: {{gitDataService.gitUser.info.company}}</span><br>
+    <span>Location: {{gitDataService.gitUser.info.location}}</span> <br>
+    <span *ngIf="gitDataService.gitUser.info.blog" >Blog: {{gitDataService.gitUser.info.blog}}</span> <br>
     <div class="links">
-      <a routerLink="/follower/{{info.login}}">Followers <span class="bubble">{{info.followers}}</span></a> | 
-      <a routerLink="/following/{{info.login}}">following <span class="bubble">{{info.following}}</span></a> |
-      <a routerLink="/repos/{{info.login}}">public_repos <span class="bubble">{{info.public_repos}}</span></a>
+      <a routerLink="/follower">Followers <span class="bubble">{{gitDataService.gitUser.info.followers}}</span></a> | 
+      <a routerLink="/following">following <span class="bubble">{{gitDataService.gitUser.info.following}}</span></a> |
+      <a routerLink="/repos">public_repos <span class="bubble">{{gitDataService.gitUser.info.public_repos}}</span></a>
     </div>
     <router-outlet></router-outlet>
   </div>

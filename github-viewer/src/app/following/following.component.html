@@ -1,6 +1,7 @@
 <div class="following">
-<h4> {{user}} followings</h4>
+<h4> {{gitDataService.gitUser.info.login}} followings</h4>
 <ul class="list">
-  <li class="item" *ngFor="let item of followings"> {{item.login}}</li>
+  <li class="item" *ngFor="let item of gitDataService.gitUser.followings" (click)="showDetails(item.login)">   {{item.login}}
+  </li>
 </ul>
 </div>

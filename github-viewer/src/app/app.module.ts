@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { RouterModule }   from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { GitDataService } from './services/git-data.service';
@@ -24,15 +24,15 @@ import { ReposComponent } from './repos/repos.component';
     HttpModule,
     RouterModule.forRoot([
       {
-        path: 'follower/:login',
+        path: 'follower',
         component: FollowerComponent
       },
       {
-        path: 'following/:login',
+        path: 'following',
         component: FollowingComponent
       },
       {
-        path: 'repos/:login',
+        path: 'repos',
         component: ReposComponent
       }
 

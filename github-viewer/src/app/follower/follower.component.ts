@@ -8,19 +8,28 @@ import { ActivatedRoute, Params } from '@angular/router'
   styleUrls: ['./follower.component.css']
 })
 export class FollowerComponent implements OnInit {
-  followers = [];
-  user= '';
+  // followers = [];
+  //user= '';
   constructor(private gitDataService: GitDataService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-  	this.route.params.forEach((params: Params) => {
-  		this.user = params['login']
-  	});
+  	// this.route.params.forEach((params: Params) => {
+  	// 	this.user = params['login']
+  	// });
+    
+    // this.user = this.gitDataService.gitUser.info.login
+  	const url = 'https://api.github.com/users/' + this.gitDataService.gitUser.info.login + '/followers';
+    this.gitDataService.fetchFollowerData(url)
+   //  .subscribe((data) => { 
+  	// 	this.followers = data;
+  	// }, (error) => {console.log(error)});
+  }
 
-  	const url = 'https://api.github.com/users/' + this.user + '/followers';
+  showDetails (login) {
+    const url = 'https://api.github.com/users/' + login;
     this.gitDataService.fetchData(url)
-    .subscribe((data) => { 
-  		this.followers = data;
-  	}, (error) => {console.log(error)});
+
+    const foll_url = 'https://api.github.com/users/' + login + '/followers';
+    this.gitDataService.fetchFollowerData(foll_url)
   }
 }

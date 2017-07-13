@@ -1,6 +1,6 @@
 <div class="repos">
-<h4> {{user}} public repositories</h4>
+<h4> {{gitDataService.gitUser.info.login}} public repositories</h4>
 <ul class="list">
-  <li class="item" *ngFor="let item of repos"> {{item.name}}</li>
+  <li class="item" *ngFor="let item of gitDataService.gitUser.repos"> {{item.name}}</li>
 </ul>
 </div>
