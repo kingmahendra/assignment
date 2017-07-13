@@ -1,15 +1,22 @@
 ul {
-  list-style-type: none;
+  list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 li {
-  height: 40px;
-  border-bottom: 1px solid #ccc;
-  vertical-align: middle;
+  background: tomato;
+  padding: 15px;
+  margin: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+  flex:1 1 0;
   cursor: pointer;
 }
+
 li:hover {
 	background-color: #ccc;
 }
@@ -23,9 +30,4 @@ li .avatar {
 li span {
 	vertical-align: middle;
 	font-size: 1em;
-}
-
-
-li:last-child {
-  border: none;
 }
