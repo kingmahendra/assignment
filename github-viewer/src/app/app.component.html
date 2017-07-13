@@ -5,14 +5,14 @@
   <div class="details" *ngIf= "gitDataService.gitUser.info">
     <img [src] = "gitDataService.gitUser.info.avatar_url" class="avatar" alt="Avatar">
     <h3> {{gitDataService.gitUser.info.name}} </h3>
-    <span *ngIf="gitDataService.gitUser.info.email" >Email: {{gitDataService.gitUser.info.email}}</span> <br>
     <span>Componay: {{gitDataService.gitUser.info.company}}</span><br>
     <span>Location: {{gitDataService.gitUser.info.location}}</span> <br>
     <span *ngIf="gitDataService.gitUser.info.blog" >Blog: {{gitDataService.gitUser.info.blog}}</span> <br>
+    <span *ngIf="gitDataService.gitUser.info.email" >Email: {{gitDataService.gitUser.info.email}}</span> <br>
     <div class="links">
       <a routerLink="/follower">Followers <span class="bubble">{{gitDataService.gitUser.info.followers}}</span></a> | 
-      <a routerLink="/following">following <span class="bubble">{{gitDataService.gitUser.info.following}}</span></a> |
-      <a routerLink="/repos">public_repos <span class="bubble">{{gitDataService.gitUser.info.public_repos}}</span></a>
+      <a routerLink="/following">Following <span class="bubble">{{gitDataService.gitUser.info.following}}</span></a> |
+      <a routerLink="/repos">Repositories <span class="bubble">{{gitDataService.gitUser.info.public_repos}}</span></a>
     </div>
     <router-outlet></router-outlet>
   </div>

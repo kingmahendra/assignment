@@ -17,6 +17,9 @@
 .details h3{
 	margin-bottom: 2px;
 }
+.links a {
+	text-decoration: none;
+}
 
 .details .avatar{
   position: relative;
