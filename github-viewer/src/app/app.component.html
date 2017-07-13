@@ -1,6 +1,15 @@
 <div class="main">
   <h1> GitHub API Viewer </h1>
-  <input [(ngModel)]="git_id" placeholder="Enter GitHub id eg. mralexgray">
+  <input [(ngModel)]="git_id" placeholder="Enter GitHub id eg. mralexgray" class="search">
   <button (click) = "showDetails()"> Show details </button>
+  <div class="details" *ngIf= "info">
+    <img [src] = "info.avatar_url" class="avatar" alt="Avatar">
+    <h3> {{info.name}} </h3>
+    <span *ngIf="info.email" >Email: {{info.email}}</span> <br>
+    <span>Componay: {{info.company}}</span><br>
+    <span>Location: {{info.location}}</span> <br>
+     <span *ngIf="info.blog" >Blog: {{info.blog}}</span> <br>
+            
+  </div>
 </div>
 

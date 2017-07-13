@@ -9,6 +9,7 @@ import { GitDataService } from './services/git-data.service';
 })
 export class AppComponent {
   git_id = ''; // mralexgray
+  info = null;
 
   constructor (private gitDataService: GitDataService) {
 
@@ -19,7 +20,11 @@ export class AppComponent {
   } 
 
   showDetails () {
-  	console.log(this.git_id);
-  	console.log(this.gitDataService.fetchData(this.git_id))
+  	this.gitDataService.fetchData(this.git_id)
+  	.subscribe((data) => { 
+  		console.log(data)
+  		this.info = data;
+  	 }, (error) => {console.log(error)})
+  	// .catch ( err => console.log(err.message));
   }
 }
