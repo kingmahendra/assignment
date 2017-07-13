@@ -9,6 +9,7 @@ import { GitDataService } from './services/git-data.service';
 import { FollowerComponent } from './follower/follower.component';
 import { FollowingComponent } from './following/following.component';
 import { ReposComponent } from './repos/repos.component';
+import { SearchPipe } from './search.pipe';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { ReposComponent } from './repos/repos.component';
     FollowerComponent,
     FollowingComponent,
     ReposComponent,
+    SearchPipe,
   ],
   imports: [
     BrowserModule,
