@@ -13,6 +13,10 @@ cd assignment/github-viewer
 
 npm install
 
+## Build the application
+
+npm run build
+
 ## Run application 
 
 npm start
